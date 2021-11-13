@@ -1,6 +1,7 @@
 package com.oceantech.service;
 
 import com.oceantech.model.Caracteristicas;
+import com.oceantech.model.oceans.*;
 import com.oceantech.repository.CaracteristicasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -14,15 +15,16 @@ public class CaracteristicasService {
     private CaracteristicasRepository repository;
 
     //create
+    //TODO terminar isso
     public ResponseEntity<Caracteristicas> createCaracteristica(Caracteristicas caracteristicas) {
         try {
             Caracteristicas _caracteristicas = repository.save(new Caracteristicas(
                     caracteristicas.getData_coleta(),
-                    caracteristicas.getAtlantico(),
-                    caracteristicas.getPacifico(),
-                    caracteristicas.getArtico(),
-                    caracteristicas.getAntartico(),
-                    caracteristicas.getIndigo()
+                    caracteristicas.getAtlantico(new Atlantico()),
+                    caracteristicas.getPacifico(new Pacifico()),
+                    caracteristicas.getArtico(new Artico()),
+                    caracteristicas.getAntartico(new Antartico()),
+                    caracteristicas.getIndigo(new Indigo())
             ));
             return new ResponseEntity<>(_caracteristicas, HttpStatus.CREATED);
         } catch (Exception e) {
@@ -53,6 +55,16 @@ public class CaracteristicasService {
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+    }
+
+    public void insertCaracteristicas() {
+        Antartico _antartico = new Antartico(8.3,2000);
+        Artico _artico = new Artico(8.3,2000);
+        Atlantico _atlantico = new Atlantico(8.3,2000);
+        Indigo _indigo = new Indigo(8.3,2000);
+        Pacifico _pacifico = new Pacifico(8.3,2000);
+        Caracteristicas _caracteristicas = new Caracteristicas("1",_atlantico,_pacifico,_artico,_antartico,_indigo);
+        repository.save(_caracteristicas);
     }
 
     //delete
