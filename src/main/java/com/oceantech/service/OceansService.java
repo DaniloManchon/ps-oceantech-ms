@@ -31,6 +31,7 @@ public class OceansService {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
     //read
     public ResponseEntity<Oceans> getOceanById(String id) {
         Optional<Oceans> oceansData = repository.findById(id);
@@ -49,18 +50,26 @@ public class OceansService {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
+
     //update
-    //TODO ARRUMAR ISSO
-//    public ResponseEntity<Oceans> updateOceans(String name, Oceans Oceans) {
-//        Optional<Oceans> oceansData = repository.findByName(name);
+    //TODO terminar metodo que atualiza um documento
+//    public ResponseEntity<Oceans> updateOceans(String name, Oceans oceans) {
+//        Optional<Oceans> oceansData = Optional.ofNullable(repository.findByName(name));
 //
 //        if (oceansData.isPresent()) {
-//
-//            return new ResponseEntity<>(repository.save(_caracteristicas), HttpStatus.OK);
+//            Oceans _oceans = repository.save(new Oceans(
+//                    oceans.getId(),
+//                    oceans.getNome(),
+//                    oceans.getData(),
+//                    oceans.getPh(),
+//                    oceans.getCo()
+//            ));
+//            return new ResponseEntity<>(repository.save(_oceans), HttpStatus.OK);
 //        } else {
 //            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 //        }
 //    }
+
     //delete
     public ResponseEntity<HttpStatus> deleteOceans(String id) {
         try {
@@ -70,7 +79,6 @@ public class OceansService {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
     public ResponseEntity<HttpStatus> deleteAllOceans() {
         try {
             repository.deleteAll();
