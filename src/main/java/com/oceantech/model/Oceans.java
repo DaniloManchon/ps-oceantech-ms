@@ -2,25 +2,25 @@ package com.oceantech.model;
 
 public class Oceans<T> {
     String id;
-    String nome;
+    String name;
     String data;
     float ph;
     int co;
 
     public Oceans(String id, String nome, String data, float ph, int co) {
         this.id = id;
-        this.nome = nome;
+        this.name = nome;
         this.data = data;
         this.ph = ph;
         this.co = co;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getId() {

@@ -15,13 +15,11 @@ public class OceansService {
     @Autowired
     OceansRepository repository;
 
-    //CRUD
-    //Create
     public ResponseEntity<Oceans> createOcean(Oceans oceans) {
         try {
             Oceans _oceans = repository.save(new Oceans(
                    oceans.getId(),
-                   oceans.getNome(),
+                   oceans.getName(),
                    oceans.getData(),
                    oceans.getPh(),
                    oceans.getCo()
@@ -32,7 +30,6 @@ public class OceansService {
         }
     }
 
-    //read
     public ResponseEntity<Oceans> getOceanById(String id) {
         Optional<Oceans> oceansData = repository.findById(id);
 
@@ -51,26 +48,6 @@ public class OceansService {
         }
     }
 
-    //update
-    //TODO terminar metodo que atualiza um documento
-//    public ResponseEntity<Oceans> updateOceans(String name, Oceans oceans) {
-//        Optional<Oceans> oceansData = Optional.ofNullable(repository.findByName(name));
-//
-//        if (oceansData.isPresent()) {
-//            Oceans _oceans = repository.save(new Oceans(
-//                    oceans.getId(),
-//                    oceans.getNome(),
-//                    oceans.getData(),
-//                    oceans.getPh(),
-//                    oceans.getCo()
-//            ));
-//            return new ResponseEntity<>(repository.save(_oceans), HttpStatus.OK);
-//        } else {
-//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-//        }
-//    }
-
-    //delete
     public ResponseEntity<HttpStatus> deleteOceans(String id) {
         try {
             repository.deleteById(id);

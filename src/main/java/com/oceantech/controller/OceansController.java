@@ -12,12 +12,6 @@ public class OceansController {
     @Autowired
     OceansService service;
 
-//    @GetMapping("/quimica")
-//    public ResponseEntity<OceansDto> readAll(){
-//        return service.;
-//    }
-
-    //CRUD
     @PostMapping("/create/oceans")
     public void create(@RequestBody Oceans oceans){
         service.createOcean(oceans);
@@ -27,7 +21,6 @@ public class OceansController {
     public ResponseEntity<Oceans> getById(@PathVariable("name") String name) {
         return service.getOceanByName(name);
     }
-
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<HttpStatus> deleteById(@PathVariable("id") String id) {
