@@ -176,6 +176,27 @@
 			"response": []
 		},
 		{
+			"name": "/search/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/search/id/6196c5d9e0dde37bc21fc7fa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search",
+						"id",
+						"6196c5d9e0dde37bc21fc7fa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "/update",
 			"request": {
 				"method": "POST",
