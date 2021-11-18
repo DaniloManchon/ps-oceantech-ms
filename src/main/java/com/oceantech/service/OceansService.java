@@ -15,16 +15,11 @@ public class OceansService {
     @Autowired
     OceansRepository repository;
 
-    public ResponseEntity<Oceans> createOcean(Oceans oceans) {
+    public ResponseEntity<Oceans> createOcean(String name, String data, float ph, int co) {
         try {
-            Oceans _oceans = repository.save(new Oceans(
-                   oceans.getId(),
-                   oceans.getName(),
-                   oceans.getData(),
-                   oceans.getPh(),
-                   oceans.getCo()
-            ));
-            return new ResponseEntity<>(_oceans, HttpStatus.CREATED);
+            Oceans _oceans = new Oceans(name,data,ph,co);
+            repository.save(_oceans);
+            return new ResponseEntity<>(_oceans,HttpStatus.CREATED);
         } catch (Exception e) {
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
