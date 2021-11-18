@@ -8,8 +8,26 @@ Projeto para avaliação PS da matéria "Microservice and Web Engineering".
 Elaborar uma API utilizando SPRING BOOT (Maven project) com persistência em MongoDB e validações com Spring Validations.
 - Os projetos devem conter pacotes model, controller e repository.
 - Rodar os testes e simular o funcionamento da API pelo Postman.
-- Por se tratar de API que gera relatórios, pensem em diferentes pesquisas combinando dados de diferentes tabelas;
-- Os requisitos devem ser pertinentes ao tema e possuir alinhamento com as demandas das outras disciplinas mencionadas neste documento.
+
+## Endpoints da aplicação:
+**POST   /create/oceans**  
+Criar um novo objeto no banco de dados.  
+    
+**GET    /search/{name}**  
+Buscar um objeto usando o nome como variavel.  
+    
+**GET    /search/id/{id}**  
+Buscar um objeto usando o id como variavel.  
+    
+**POST   /update/{name}**  
+Atualizar os dados de um objeto no banco.  
+    
+**DELETE /delete/{name}**  
+Deletar um objeto do banco de dados.  
+    
+**DELETE /delete/all**  
+Deletar todos os objetos do banco de dados.  
+    
 
 ## Integrantes do grupo:
 Camila Gabriel Marraccini  

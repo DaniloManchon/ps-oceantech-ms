@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "73525f26-8a79-4c55-ab2a-26210aa1af89",
+		"name": "ps-oceantech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/create",
+			"item": [
+				{
+					"name": "Atlantico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Atlantico\",\n    \"data\":\"16-11-2021\",\n    \"ph\": 7.2,\n    \"co\": 2002\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/create/oceans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"create",
+								"oceans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pacifico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Pacifico\",\n    \"data\":\"16-11-2021\",\n    \"ph\": 7.5,\n    \"co\": 1980\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/create/oceans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"create",
+								"oceans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Artico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Artico\",\n    \"data\":\"10-11-2021\",\n    \"ph\": 8.0,\n    \"co\": 2000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/create/oceans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"create",
+								"oceans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Antartico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Antartico\",\n    \"data\":\"16-11-2021\",\n    \"ph\": 7.9,\n    \"co\": 2005\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/create/oceans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"create",
+								"oceans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Indico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Indico\",\n    \"data\":\"16-10-2021\",\n    \"ph\": 7.1,\n    \"co\": 1999\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/create/oceans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"create",
+								"oceans"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/search/atlantico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search",
+						"atlantico"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Atlantico\",\n    \"data\":\"18-11-2021\",\n    \"ph\": 7.3,\n    \"co\": 2003\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/update/atlantico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"update",
+						"atlantico"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete/all",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/delete/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete/name",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/delete/atlantico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete",
+						"atlantico"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
